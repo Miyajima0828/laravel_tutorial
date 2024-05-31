@@ -52,7 +52,7 @@
                                     <td><a
                                             href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
                                             編集
-                                        </a>/td>
+                                        </a></td>
                                 </tr>
                             @endforeach
                         </tbody>
