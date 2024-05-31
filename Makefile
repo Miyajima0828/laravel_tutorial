@@ -10,7 +10,7 @@ init:
 up:
 	docker compose up -d
 
-db-migrate-seed:
+fresh:
 	docker compose exec app php artisan migrate:fresh --seed
 
 ps:
