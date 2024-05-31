@@ -46,3 +46,9 @@ npm-run-dev:
 
 npm-run-build:
 	docker compose exec app npm run build
+
+test:
+	docker compose exec app php artisan test
+
+test-a:
+	docker compose exec app php artisan test --group a
