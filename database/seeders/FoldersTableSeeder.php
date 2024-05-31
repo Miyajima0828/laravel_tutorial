@@ -14,14 +14,13 @@ class FoldersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = User::first();
 
         $titles = ['プライベート', '仕事', '旅行'];
 
         foreach($titles as $title){
             Folder::create([
                 'title' => $title,
-                'user_id' => $user->id,
+                'user_id' => User::first()->id,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
