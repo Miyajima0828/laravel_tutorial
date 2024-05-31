@@ -13,7 +13,7 @@ class EditTask extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,12 +23,11 @@ class EditTask extends FormRequest
      */
     public function rules()
     {
-        $rule = parent::rules();
-
-        $status_rule = Rule::in(array_keys(Task::STATUS));
-
-        return $rule + [
-            'status' => 'required|' . $status_rule,
+        return [
+            'status' => [
+                'required',
+                Rule::in(array_keys(Task::STATUS))
+                ]
         ];
     }
 
