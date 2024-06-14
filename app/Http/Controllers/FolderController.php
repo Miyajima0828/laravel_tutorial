@@ -32,7 +32,7 @@ class FolderController extends Controller
         $user->folders()->save($folder);
 
         return redirect()->route('tasks.index', [
-            'id' => $folder->id,
+            'folder' => $folder->id,
         ]);
     }
 }
