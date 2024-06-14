@@ -31,7 +31,7 @@ services:
       - postgres-volume:/var/lib/postgresql/data
 
   mail:
-    image: axllent/mailpit:v1.13
+    image: axllent/mailpit
     ports:
       - '8025:8025' #web上でmailサーバのGUIを表示させるポート
       - '1025:1025' #smtpサーバ
